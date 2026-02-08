@@ -16,6 +16,14 @@ const images = [
 ];
 
 export default function Index() {
+  const showAlert = () => {
+    Alert.alert(
+      "Alert",
+      "Alert Button pressed",
+      [{ text: "OK", onPress: () => console.log("OK pressed") }],
+      { cancelable: true },
+    );
+  };
   return (
    <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
       {/* Tabs */}
@@ -25,7 +33,26 @@ export default function Index() {
         </View>
         <Text style={styles.inactiveText}>Following</Text>
       </View>
+
+      {/* alert button */}
+      <View style={styles.buttonContainer}>
+        <Button title="Show Alert" onPress={showAlert} />
+      </View>
+
+      {/* feed */}
+      <View style={styles.grid}>
+        {images.map((item, index) => (
+          <View
+            key={item.id}
+            style={[styles.card, { height: index % 2 === 0 ? 200 : 260 }]}
+          >
+            <Image source={item.image} style={styles.image} />
+            <Text style={styles.caption}>Image {item.id}</Text>
+          </View>
+        ))}
+      </View>
     </SafeAreaView>
+    
   );
 }
 
