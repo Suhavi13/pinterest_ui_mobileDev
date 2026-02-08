@@ -17,12 +17,7 @@ const images = [
 
 export default function Index() {
   const showAlert = () => {
-    Alert.alert(
-      "Alert",
-      "Alert Button pressed",
-      [{ text: "OK", onPress: () => console.log("OK pressed") }],
-      { cancelable: true },
-    );
+    Alert.alert("Alert", "Alert Button pressed");
   };
   return (
    <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
@@ -85,5 +80,37 @@ const styles = StyleSheet.create({
   inactiveText: {
     color: "#000",
     fontWeight: "600",
+  },container: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
+  buttonContainer: {
+    padding: 10,
+    alignItems: "center",
+  },
+  grid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    paddingHorizontal: 10,
+    justifyContent: "space-between",
+  },
+  card: {
+    width: cardWidth,
+    borderRadius: 20,
+    marginBottom: 12,
+    overflow: "hidden",
+    backgroundColor: "#f2f2f2",
+  },
+  image: {
+    width: "100%",
+    height: "85%",
+    resizeMode: "cover",
+  },
+  caption: {
+    textAlign: "center",
+    paddingVertical: 6,
+    fontSize: 14,
+    fontWeight: "500",
   },
 });
+
