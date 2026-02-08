@@ -1,7 +1,20 @@
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { Alert, Image, StyleSheet, Text, View } from "react-native";
+import { Alert,Button, Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
+const screenWidth = Dimensions.get("window").width;
+const cardWidth = screenWidth / 2 - 18;
+
+const images = [
+  { id: "1", image: require("./images/image1.png") },
+  { id: "2", image: require("./images/image2.png") },
+  { id: "3", image: require("./images/image3.png") },
+  { id: "4", image: require("./images/image4.png") },
+  { id: "5", image: require("./images/image5.png") },
+  { id: "6", image: require("./images/image6.png") },
+];
+
 export default function Index() {
   return (
    <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
