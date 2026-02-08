@@ -46,6 +46,13 @@ export default function Index() {
           </View>
         ))}
       </View>
+     {/* bottom nav */}
+      <View style={styles.bottomNav}>
+        <Ionicons name="home" size={26} color="black" />
+        <Ionicons name="search" size={26} color="#777" />
+        <Ionicons name="chatbubble-outline" size={26} color="#777" />
+        <Ionicons name="person-circle-outline" size={30} color="#777" />
+      </View>
     </SafeAreaView>
     
   );
@@ -111,6 +118,15 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     fontSize: 14,
     fontWeight: "500",
-  },
+  },// Bottom nav
+  bottomNav: {
+    height: 60,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    borderTopWidth: 0.5,
+    borderTopColor: "#ddd",
+  }
 });
 
