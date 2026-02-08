@@ -31,12 +31,12 @@ export default function Index() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* 🔔 ALERT BUTTON */}
+      {/* alert button */}
       <View style={styles.buttonContainer}>
         <Button title="Show Alert" onPress={showAlert} />
       </View>
 
-      {/* 📌 PINTEREST GRID */}
+      {/* feed */}
       <View style={styles.grid}>
         {images.map((item, index) => (
           <View
